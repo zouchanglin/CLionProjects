@@ -15,7 +15,7 @@ int main() {
     } else{
         while(1){
             printf("parent: pid=%d ppid=%d\n",getpid(),getppid());
-            sleep(3);
+            sleep(4);
         }
     }
 
