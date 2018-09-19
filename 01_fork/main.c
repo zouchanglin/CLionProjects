@@ -9,11 +9,12 @@ int main() {
         printf("error\n");
     } else if(ret == 0){
         while (1){
-            printf("child: pid=%d ppid=%d\n",getpid(),getppid());
+            printf("child: pid= %d ppid=%d\n",getpid(),getppid());
             sleep(1);
         }
     } else{
         while(1){
+            //测试中文注释啊
             printf("parent: pid=%d ppid=%d\n",getpid(),getppid());
             sleep(4);
         }
