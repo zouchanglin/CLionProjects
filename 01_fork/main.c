@@ -14,7 +14,7 @@ int main() {
         }
     } else{
         while(1){
-            //测试中文注释啊
+            //测试中文注释
             printf("parent: pid=%d ppid=%d\n",getpid(),getppid());
             sleep(4);
         }
