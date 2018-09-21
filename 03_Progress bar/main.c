@@ -18,18 +18,12 @@ int main(int argc, char *argv[])
     {
         buf[i] = '#';
         if(i<40)
-        {
-            //进度条颜色修饰
-            printf("[\033[0;31m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);
-        }
+            printf("[\033[0;31m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);//进度条颜色修饰
         else if(i>=40 && i< 80)
-        {
             printf("[\033[0;33m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);
-        }
         else
-        {
             printf("[\033[0;32m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);
-        }
+
         //printf("[%-100s] [%d%%][%c]\r",buf,i,arr[i%4]);
 
         //printf是按行缓冲的，所以需要刷新缓冲区
