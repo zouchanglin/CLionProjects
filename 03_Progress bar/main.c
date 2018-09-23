@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     {
         buf[i] = '#';
         if(i<40)
-            printf("[\033[0;31m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);//进度条颜色修饰
+            printf("[\033[0;31m%-100s\033[0;39m] [%d%%][%c]\r", buf,i,arr[i%4]);//进度条颜色修饰
         else if(i>=40 && i< 80)
             printf("[\033[0;33m%-100s\033[0;39m] [%d%%][%c]\r",buf,i,arr[i%4]);
         else
