@@ -36,6 +36,7 @@ void InsertSort(int *arr, int n)
 void ShellSort(int* arr,int len)
 {
     int gap = len;
+    assert(arr);
     while(gap>1)
     {
         gap = gap/3+1;
@@ -54,6 +55,29 @@ void ShellSort(int* arr,int len)
     }
 }
 
+void SelectSort(int* arr, int n)
+{
+    int index = 0;
+    assert(arr);
+    for(index=0;index<n;index++)
+    {
+        int min = index;
+        int i = 0;
+        for(i=index+1;i<n;i++)
+        {
+            if(arr[min]>arr[i])
+            {
+                min = i;
+            }
+        }
+        if(min != index)
+        {
+            int tmp = arr[index];
+            arr[index] = arr[min];
+            arr[min] = tmp;
+        }
+    }
+}
 
 
 int main(int argc, char* argv[]) {
