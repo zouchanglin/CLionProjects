@@ -60,8 +60,11 @@ int main(int argc, char* argv[]) {
     int array[]={4,6,8,3,5,11,19,4,2,6,1};
     int len = sizeof(array)/sizeof(int);
     PrintArray(array,len);
+
     //InsertSort(array,len);
+
     ShellSort(array,len);
+
     PrintArray(array,len);
     return 0;
 }
