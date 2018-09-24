@@ -188,6 +188,52 @@ void BubbleSort(int* arr, int len)
     }
 }
 
+//快速排序
+//三数取中法
+int GetMidIndex(int* array, int left, int right)
+{
+    int mid = ((left+right)>>2);
+    assert(array);
+    if(array[left]>array[right])
+    {
+        if(array[mid]<array[right])
+            return mid;
+        else
+            return array[mid]>array[left] ? left:mid;
+    }
+    else //array[left] <= array[right]
+    {
+        if(array[left]>array[mid])
+            return left;
+        else //array[left] <= array[mid]
+            return array[mid]>array[right] ? right:mid;
+    }
+
+
+}
+void FastSort(int *arr,int left, int right)
+{
+    int mid = 0;
+    int key = 0;
+    int prev = left-1;
+    int cur = left;
+    assert(arr);
+    mid = GetMidIndex(arr,left,right);
+    if(mid != right)
+    {
+        swap(&arr[mid], &arr[right]);
+    }
+    key = arr[right];
+    while(cur<right)
+    {
+        // 找到比key的小的数据则与前面的数据进行交换
+
+    }
+
+
+
+}
+
 int main(int argc, char* argv[]) {
     int array[]={30,6,8,3,5,11,19,4,2,6,1};
     int len = sizeof(array)/sizeof(int);
