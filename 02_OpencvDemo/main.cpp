@@ -6,9 +6,9 @@ using namespace cv;
 
 int main() {
 
-    Mat ret = imread("/home/zcl/VSworkspace/Image/a.jpg");
-    namedWindow("TestOpencv",CV_WINDOW_AUTOSIZE);
-    imshow("TestOpencv",ret);
+    Mat ret = imread("/home/zcl/图片/timg.jpeg");
+    namedWindow("ayst", CV_WINDOW_AUTOSIZE);
+    imshow("ayst",ret);
 
     waitKey(0);
     return 0;
