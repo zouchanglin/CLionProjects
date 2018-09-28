@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<!--
+        	作者：15291418231@163.com
+        	时间：2018-03-12
+        	描述：对框的限定、对按钮样式的限定
+        -->		
+		<style>
+			#parent {
+				height: 710px;
+				width: 408px;
+				border: 1px solid red;
+				background-color: bisque;
+				border-radius: 10px;
+			}
+			
+			.btn {
+				width: 100px;
+				height: 100%;
+				float: left;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 100px;
+				font-size: 20px;
+				
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				//页面加载函数获取显示框
+				display = document.getElementById("display");
+			}
+			//获取输入的字符串
+			var str_results = "";
+
+			/**
+			 * 显示数学式以及更改
+			 */
+			function my_show(event) {
+			
+			
+				if(event.target.innerText == "C") {
+					//如果遇到清空按钮就清空输入字符串，并展示0
+					str_results = "";
+					display.innerText = "0";
+					return;
+				}
+				//如果遇到=按钮，就先不添加到results中
+				if(event.target.innerText == "=") {
+					return;
+				}
+				//如果点击的是DEL按钮（删除一个字符）
+				if(event.target.innerText == "DEL") {
+					//alert(str_results.substring(0,str_results.length-1));
+					//截取一个字符
+					str_results = str_results.substring(0, str_results.length - 1);
+					display.innerText = str_results;
+					return;
+				}
+
+				//不断拼接字符串，并同时展示字符串
+				str_results += event.target.innerText;
+				display.innerText = str_results;
+				
+			}
+
+			/**
+			 * 计算方法
+			 */
+			function my_calc_result() {
+				//eval()函数用来计算字符串的结果如果参数中没有合法的表达式和语句，则抛出 SyntaxError 异常。
+				//如果非法调用 eval()，则抛出 EvalError 异常。
+				//如果传递给 eval() 的 Javascript 代码生成了一个异常，eval() 将把该异常传递给调用者。
+
+				//特殊运算特殊处理
+
+				if(str_results.indexOf("^") != -1) {
+					//先做字符串切割
+					strarr_number = str_results.split("^")
+					//循环的方式计算乘方
+					other_result = 1;
+					for(i = 1; i <= strarr_number[1]; i++) {
+						other_result *= strarr_number[0];
+					}
+					display.innerText = other_result + "";
+
+				} else if(str_results.indexOf("√") != -1) {
+					//先做字符串切割
+					strarr_number = str_results.split("√")
+					display.innerText = Math.sqrt(strarr_number[1]) + "";
+				} else {
+					//普通算式直接计算
+					my_res = eval(str_results);
+					display.innerText = my_res + "";
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="parent" onClick="my_show(event)">
+			<!--输入框+结果显示-->
+			<div id="display" style="width: 406px;height: 200px; 
+				font-size: 40px;
+				border: 1px solid red; text-align: right; line-height: 200px;">
+				0
+			</div>
+
+			<!-- 按钮 -->
+			<div style="width: 100%;height: 100px; border: 0px solid red;">
+				<div class="btn">C</div>
+				<!-- 乘方计算 -->
+				<div class="btn">^</div>
+				<!-- 开方计算 -->
+				<div class="btn">√</div>
+				<div class="btn">/</div>
+
+			</div>
+			<div style="width: 100%;height: 100px; border: 0px solid red;">
+				<div class="btn">7</div>
+				<div class="btn">8</div>
+				<div class="btn">9</div>
+				<div class="btn">*</div>
+
+			</div>
+			<div style="width: 100%;height: 100px; border: 0px solid red;">
+				<div class="btn">4</div>
+				<div class="btn">5</div>
+				<div class="btn">6</div>
+				<div class="btn">-</div>
+
+			</div>
+			<div style="width: 100%;height: 100px; border: 0px solid red;">
+				<div class="btn">1</div>
+				<div class="btn">2</div>
+				<div class="btn">3</div>
+				<div class="btn">+</div>
+
+			</div>
+			<div style="width: 100%;height: 100px; border: 0px solid red;">
+				<!-- 左下角圆角 -->
+				<div class="btn" style="border-bottom-left-radius: 10px;">0</div>
+				<div class="btn">.</div>
+				<div class="btn">DEL</div>
+				<!-- 给=绑定计算方法 -->
+				<!-- 右下角圆角 -->
+				<div class="btn" onclick="my_calc_result()"
+					style="border-bottom-right-radius: 10px;">=</div>
+
+			</div>
+		</div>
+	</body>
+</html>
+
