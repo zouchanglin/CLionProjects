@@ -4,7 +4,7 @@
 
 # 仓库目录
 ## 00_code
-函数：`pid_t getpid(void)`和`pid_t getppid(void)`
+函数：`pid_t getpid(void)` 和`pid_t getppid(void)`
 
 获取进程id、获取父进程id
 ## 01_fork
