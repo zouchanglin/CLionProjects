@@ -1,4 +1,4 @@
-	package com.xpu.jdbc;
+package com.xpu.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
