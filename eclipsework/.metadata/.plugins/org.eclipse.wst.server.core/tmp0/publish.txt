@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Sep 21 10:23:34 CST 2018
+org.eclipse.jst.jee.server\:Web19=/home/zcl/apache-tomcat-7.0.91/webapps/Web19
+org.eclipse.jst.jee.server\:Register=/home/zcl/apache-tomcat-7.0.91/webapps/Register

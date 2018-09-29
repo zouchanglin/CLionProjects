@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/zcl/eclipsework/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2946494416.index
+1156680953.index
+2028774647.index
+335057502.index
+2676675087.index
+517799705.index
+1262166527.index
