@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -g -ggdb   CMakeFiles/07_envCode.dir/main.cpp.o  -o 07_envCode -Wl,-rpath,/usr/local/lib /usr/local/lib/libopencv_core.so /usr/local/lib/libopencv_highgui.so /usr/local/lib/libopencv_imgproc.so /usr/local/lib/libopencv_imgcodecs.so 

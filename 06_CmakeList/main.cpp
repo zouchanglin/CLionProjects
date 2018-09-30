@@ -13,8 +13,7 @@ int sub(int a,int b,int c){
 }
 int main() {
     Mat src = imread("/home/zcl/图片/timg.jpeg");
-    namedWindow("Hello",CV_WINDOW_AUTOSIZE);
-    
+    namedWindow("Hello",CV_WINDOW_AUTOSIZE);    
     imshow("Hello",src);
     waitKey(0);
 
