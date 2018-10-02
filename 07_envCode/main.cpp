@@ -13,6 +13,8 @@ int main(int argc, char const *argv[])
     for(int i = 0;i<10;i++){
         std::cout << i+1 << std::endl;
     }
+    Mat dst;
+    cvFilter2D(src,dst,new KeyPoint);
     std::cout<<ret<<std::endl;
     namedWindow("src",CV_WINDOW_AUTOSIZE);
     imshow("src", src);
