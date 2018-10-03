@@ -6,10 +6,7 @@
 # Last Modified: 2018-10-03 11:53:54
 ***********************************************/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include "Heap.h"
 
 int main(int argc, char *argv[]){
 
