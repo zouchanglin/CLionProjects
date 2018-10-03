@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\08_SoftAddress.dir/objects.a
-C:\develop\mingw64\bin\ar.exe cr CMakeFiles\08_SoftAddress.dir/objects.a @CMakeFiles\08_SoftAddress.dir\objects1.rsp
-C:\develop\mingw64\bin\g++.exe  -O3 -g -ggdb   -Wl,--whole-archive CMakeFiles\08_SoftAddress.dir/objects.a -Wl,--no-whole-archive  -o 08_SoftAddress.exe -Wl,--out-implib,lib08_SoftAddress.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\08_SoftAddress.dir\linklibs.rsp

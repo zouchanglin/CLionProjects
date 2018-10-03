@@ -1,3 +1,0 @@
-C:/Code/08_SoftAddress/CMakeFiles/08_SoftAddress.dir
-C:/Code/08_SoftAddress/CMakeFiles/edit_cache.dir
-C:/Code/08_SoftAddress/CMakeFiles/rebuild_cache.dir
