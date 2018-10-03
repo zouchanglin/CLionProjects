@@ -13,6 +13,8 @@ stdlib.h
 -
 opencv2/opencv.hpp
 -
+unistd.h
+-
 
 C:/develop/opencv3.2/install/include/opencv2/calib3d.hpp
 opencv2/core.hpp

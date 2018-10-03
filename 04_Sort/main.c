@@ -120,6 +120,25 @@ void SelectSort_OP(int *arr, int len)
     }
 }
 
+void SelectSort_op2(int *a, int n){
+    assert(a);
+    int begin = 0;
+    int end = n-1;
+    int minindex = begin;
+    int maxindex = begin;
+    //分别找到最大和最小的下标志
+    for(int i = 0;i <= end; ++i){
+        if(a[i]>a[maxindex]){
+            maxindex = i;
+        }
+        if(a[i]<a[minindex]){
+            minindex = i;
+        }
+    }
+
+
+}
+
 void HeapAdjust(int *arr,int root,int len)
 {
     //child是左孩子的下标
