@@ -2,7 +2,6 @@
 #include <assert.h>
 
 
-
 void PrintArray(const int *arr,int n)
 {
     int i = 0;
@@ -12,7 +11,7 @@ void PrintArray(const int *arr,int n)
     printf("\n");
 }
 
-static void swap(int *p1, int *p2)
+static void Swap(int *p1, int *p2)
 {
     int tmp = *p1;
     *p1 = *p2;
@@ -112,31 +111,41 @@ void SelectSort_OP(int *arr, int len)
                 max = i;
             }
         }
-        swap(&arr[start],&arr[min]);
+        Swap(&arr[start],&arr[min]);
         //注意这里最大的数据在开始的位置则需要修正
         if(max == start)
             max = min;
-        swap(&arr[end],&arr[max]);
+        Swap(&arr[end],&arr[max]);
     }
 }
 
-void SelectSort_op2(int *a, int n){
-    assert(a);
+//老师讲的方式（推荐使用）
+void SelectSort_OP2(int *arr, int n){
     int begin = 0;
     int end = n-1;
-    int minindex = begin;
-    int maxindex = begin;
-    //分别找到最大和最小的下标志
-    for(int i = 0;i <= end; ++i){
-        if(a[i]>a[maxindex]){
-            maxindex = i;
-        }
-        if(a[i]<a[minindex]){
-            minindex = i;
-        }
+
+    assert(arr);
+    while(begin < end){
+            int minindex = begin;
+            int maxindex = begin;
+	    //分别找到最大和最小的下标
+	    int i = 0;
+	    for(i = begin;i <= end; ++i){
+		if(arr[i]>arr[maxindex]){
+		    maxindex = i;
+		}
+		if(arr[i]<arr[minindex]){
+		    minindex = i;
+		}
+	    }
+	    //把最小的放在前面，最大的放在后面
+	    Swap(&arr[begin], &arr[minindex]);
+	    if(begin == maxindex)//修正
+		    maxindex = minindex;
+	    Swap(&arr[end], &arr[maxindex]);
+	    ++begin;
+	    --end;
     }
-
-
 }
 
 void HeapAdjust(int *arr,int root,int len)
@@ -155,7 +164,7 @@ void HeapAdjust(int *arr,int root,int len)
         // 2.否则,交换孩子节点和根节点,将根节点继续往下调整
         if(arr[child] > arr[root])
         {
-            swap(&arr[child], &arr[root]);
+            Swap(&arr[child], &arr[root]);
             root = child;
             child = child*2 +1;
         }
@@ -180,7 +189,7 @@ void HeapSort(int *arr, int len)
     //向下调整
     for(i = len-1;i>0;i--)
     {
-        swap(&arr[i], &arr[0]);
+        Swap(&arr[i], &arr[0]);
         HeapAdjust(arr,0,i);
     }
 }
@@ -198,7 +207,7 @@ void BubbleSort(int* arr, int len)
         {
             if(arr[index]>arr[index+1])
             {
-                swap(&arr[index], &arr[index+1]);
+                Swap(&arr[index], &arr[index+1]);
                 flag = 1;
             }
         }
@@ -240,7 +249,7 @@ void FastSort(int *arr,int left, int right)
     mid = GetMidIndex(arr,left,right);
     if(mid != right)
     {
-        swap(&arr[mid], &arr[right]);
+        Swap(&arr[mid], &arr[right]);
     }
     key = arr[right];
     while(cur<right)
@@ -254,7 +263,7 @@ void FastSort(int *arr,int left, int right)
 }
 
 int main(int argc, char* argv[]) {
-    int array[]={30,6,8,3,5,11,19,4,2,6,1};
+    int array[]={20,6,18,3,5,11,19,4,2,6,1};
     int len = sizeof(array)/sizeof(int);
     PrintArray(array,len);
 
@@ -263,7 +272,8 @@ int main(int argc, char* argv[]) {
     //SelectSort(array,len);
     //SelectSort_OP(array,len);
     //HeapSort(array,len);
-    BubbleSort(array,len);
+    // BubbleSort(array,len);
+    SelectSort_OP2(array, len);
 
 
     PrintArray(array,len);
