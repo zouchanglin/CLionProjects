@@ -30,8 +30,7 @@ public class JDBCDemo {
 			int ret = stmt.executeUpdate("update account set money=5000 where name='tom'");
 			if(ret == 1){
 				//TODO 这才是成功，SQL像name找不到这种事情是不会抛出异常的
-			}
-			
+			}			
 			//手动提交事务
 			conn.commit();
 			
