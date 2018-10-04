@@ -11,7 +11,6 @@
 
 函数：`pid_t fork(void)` 
 
-
 初次使用fork函数，尝试开辟子进程！
 ## 02_OpencvDemo
 在Linux下编译的Opencv库
@@ -26,8 +25,22 @@ printf()函数的缓冲区、终端如何输出彩色
 模拟僵尸进程、孤儿进程
 注意UBuntu图形界面下运行的结果（1和非1的原因）
 
+## 06_CmakeList
+CMakeLists的语法
 
+## 07_envCode
+环境变得获取
+
+## 08_SoftAddress
+程序地址空间
+
+## 09_heap
+堆的复习，如何建堆
+
+## http
+自主Http服务器项目
 
 # 联系方式
-**QQ ** 2420145866
-**Email ** 15291418231@163.com
+**QQ** 2420145866
+**Email** 15291418231@163.com
+
