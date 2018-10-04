@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/06_CmakeList.dir/main.cpp.o  -o 06_CmakeList -Wl,-rpath,/usr/local/lib /usr/local/lib/libopencv_core.so /usr/local/lib/libopencv_highgui.so /usr/local/lib/libopencv_imgproc.so /usr/local/lib/libopencv_imgcodecs.so 

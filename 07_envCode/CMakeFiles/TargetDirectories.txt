@@ -1,3 +1,0 @@
-/home/zcl/Code/07_envCode/CMakeFiles/rebuild_cache.dir
-/home/zcl/Code/07_envCode/CMakeFiles/07_envCode.dir
-/home/zcl/Code/07_envCode/CMakeFiles/edit_cache.dir
