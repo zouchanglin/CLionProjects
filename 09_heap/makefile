@@ -3,8 +3,9 @@
 #        Create: 2018-10-03 11:52:59
 # Last Modified: 2018-10-03 11:52:59
 #**********************************************/
-test.out:test.c
-	gcc test.c -o test.out
+
+test.out:test.c Heap.c
+	gcc -g Heap.c test.c -o test.out
 
 
 .PHONY:clean
