@@ -1,3 +1,0 @@
-/home/zcl/CLionProjects/02_OpencvDemo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zcl/CLionProjects/02_OpencvDemo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/zcl/CLionProjects/02_OpencvDemo/cmake-build-debug/CMakeFiles/02_OpencvDemo.dir

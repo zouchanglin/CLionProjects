@@ -1,3 +1,0 @@
-/home/zcl/CLionProjects/01_fork/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zcl/CLionProjects/01_fork/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/zcl/CLionProjects/01_fork/cmake-build-debug/CMakeFiles/01_fork.dir
