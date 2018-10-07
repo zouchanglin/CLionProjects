@@ -1,0 +1,6 @@
+test.out:main.c
+	gcc main.c -0 test.out
+	
+.PHONY:clean
+clean:
+	rm -rf test.out
