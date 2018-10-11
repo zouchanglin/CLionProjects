@@ -1,29 +1,53 @@
 #include <unistd.h>
+#include <sys/wait.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <errno.h>
 
+char* argv[8];
+int argc = 0;
 
-#define MAX 1024
-#define NUM 16
+void do_parse(char *buf){
+  int i;
+  int status = 0;
 
-int main(){
-  char cmd[MAX];
-  char *myargv[NUM];
-  int i = 0;
-  char *ret = NULL;
-  printf("[tim@localhost mybash]# ");
-  //scanf("%s", cmd);
-  fgets(cmd, sizeof(cmd), stdin);
-  myargv[i++] = strtok(cmd, " ");
-
-  while(ret = strtok(NULL, " ")){
-    myargv[i++] = ret;
+  for(argc=i=0;buf[i];i++){
+    if(!isspace(buf[i]) && status == 0){
+      argv[argc++] = buf+i;
+      status = 1;
+    }else if(isspace(buf[i])){
+      status = 0;
+      buf[i] = 0;
+    }
   }
+  argv[argc] = NULL;
+}
 
-  myargv[i] = NULL;
-  
-  
+void do_execute(void){
+  pid_t pid = fork();
+  switch(pid){
+    case -1:
+      perror("fork");
+      exit(EXIT_FAILURE);
+      break;
+    case 0:
+      execvp(argv[0], argv);
+      perror("execvp");
+      exit(EXIT_FAILURE);
+    default:
+      {
+        int st;
+        while(wait(&st) != pid);
+      }
+  }
+}
 
-  return 0;
+int main(void){
+  char buf[1024] = {};
+  while(1){
+    scanf("%[^\n]%*c", buf);
+    do_parse(buf);
+    do_execute();
+  }
 }
