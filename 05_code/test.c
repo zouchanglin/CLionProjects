@@ -10,8 +10,7 @@ File Name :test.c
 #include <unistd.h>
 #include <sys/types.h>
 
-int main(int argc, char *argv[])
-{
+int main(void){
 	int pid = fork();
 	if(pid < 0){
 		perror("fork failed...");
@@ -26,5 +25,6 @@ int main(int argc, char *argv[])
 		sleep(2);
 		exit(0);	
 	}
+
     return 0;
 }
