@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-#include <ctype.h>
-
 
 char* argv[8];
 int argc = 0;
@@ -34,10 +32,8 @@ void do_execute(void){
       exit(EXIT_FAILURE);
       break;
     case 0:
-      //execvp(argv[0], argv);
-      printf("zcl:argv[0] = %s, argc[1] = %s\n", argv[0], argv[1]);
-      
-      //perror("execvp");
+      execvp(argv[0], argv);
+      perror("execvp");
       exit(EXIT_FAILURE);
     default:
       {
