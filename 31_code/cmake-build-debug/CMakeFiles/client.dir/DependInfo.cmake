@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/zcl/CLionProjects/03_code/client.c" "/home/zcl/CLionProjects/03_code/cmake-build-debug/CMakeFiles/client.dir/client.c.o"
+  "/home/zcl/LinuxCode/31_code/client.c" "/home/zcl/LinuxCode/31_code/cmake-build-debug/CMakeFiles/client.dir/client.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

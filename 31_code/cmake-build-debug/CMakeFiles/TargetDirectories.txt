@@ -1,4 +1,4 @@
-/home/zcl/CLionProjects/03_code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zcl/CLionProjects/03_code/cmake-build-debug/CMakeFiles/server.dir
-/home/zcl/CLionProjects/03_code/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/zcl/CLionProjects/03_code/cmake-build-debug/CMakeFiles/client.dir
+/home/zcl/LinuxCode/31_code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zcl/LinuxCode/31_code/cmake-build-debug/CMakeFiles/server.dir
+/home/zcl/LinuxCode/31_code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zcl/LinuxCode/31_code/cmake-build-debug/CMakeFiles/client.dir

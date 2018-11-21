@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zcl/LinuxCode/32_code/client.c
+comm.h
+/home/zcl/LinuxCode/32_code/comm.h
+
+/home/zcl/LinuxCode/32_code/comm.c
+comm.h
+/home/zcl/LinuxCode/32_code/comm.h
+
+/home/zcl/LinuxCode/32_code/comm.h
+stdio.h
+-
+errno.h
+-
+sys/types.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+memory.h
+-
+unistd.h
+-
+
