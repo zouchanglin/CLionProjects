@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zcl/CLionProjects/03_code/client.c
+stdio.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+fcntl.h
+-
+unistd.h
+-
+memory.h
+-
+
